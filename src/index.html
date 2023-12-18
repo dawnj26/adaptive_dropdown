@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link href="style.css" rel="stylesheet" />
+        <script
+            crossorigin="anonymous"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+        ></script>
+        <title>Barangay Information</title>
+    </head>
+    <body class="">
+        <div id="app">
+            <div id="app__content">
+                <div class="bg-slate-200 p-4" id="header">
+                    <h1 class="text-3xl">Barangay Information</h1>
+                </div>
+
+                <div class="flex w-full items-center justify-around">
+                    <div
+                        class="form flex h-96 w-96 flex-col bg-slate-50 p-4 shadow"
+                    >
+                        <h2 class="mb-4 text-2xl font-medium">Find Barangay</h2>
+                        <label class="mb-2 block text-lg" for="province"
+                            >Province</label
+                        >
+                        <select
+                            class="mb-4 p-2 text-sm"
+                            id="province"
+                            name="province"
+                        ></select>
+                        <label class="mb-2 block text-lg" for="municipality"
+                            >Municipality</label
+                        >
+                        <select
+                            class="mb-4 p-2 text-sm"
+                            id="municipality"
+                            name="municipality"
+                            disabled
+                        >
+                            <option value="">Select Municipality</option>
+                        </select>
+                        <label class="mb-2 block text-lg" for="barangay"
+                            >Barangay</label
+                        >
+                        <select
+                            class="mb-4 p-2 text-sm"
+                            id="barangay"
+                            name="barangay"
+                            disabled
+                        >
+                            <option value="">Select Barangay</option>
+                        </select>
+                    </div>
+                    <div class="h-96 w-full bg-slate-50 shadow" id="table">
+                        <table
+                            class="table h-full w-full border-collapse border-2 border-slate-400"
+                        >
+                            <thead>
+                                <tr
+                                    class="border-collapse border-2 border-slate-400"
+                                >
+                                    <th
+                                        class="border-collapse border-2 border-slate-400"
+                                    >
+                                        Province
+                                    </th>
+                                    <th
+                                        class="border-collapse border-2 border-slate-400"
+                                    >
+                                        Municipality
+                                    </th>
+                                    <th
+                                        class="border-collapse border-2 border-slate-400"
+                                    >
+                                        Barangay
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td
+                                        id="selected-province"
+                                        class="border-collapse border-2 border-slate-400 text-center"
+                                    ></td>
+                                    <td
+                                        id="selected-municipal"
+                                        class="border-collapse border-2 border-slate-400 text-center"
+                                    ></td>
+                                    <td
+                                        id="selected-barangay"
+                                        class="border-collapse border-2 border-slate-400 text-center"
+                                    ></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
